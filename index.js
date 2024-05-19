@@ -16,7 +16,7 @@ app.use(bodyParser.json());
 })();
 
 app.post('/send-code', async (req, res) => {
-    const { email, username, senderName } = req.body;
+    const { email, username } = req.body;
     const result = await client.get(email);
     // 已存在此邮箱数据
     if(result) {
@@ -30,7 +30,7 @@ app.post('/send-code', async (req, res) => {
     const verificationCode = Math.floor(100000 + Math.random() * 900000).toString();
     try {
         // 发送验证码邮件
-        await sendVerificationEmail(email, username, verificationCode, senderName);
+        await sendVerificationEmail(email, username, verificationCode);
         // 存储验证码至 redis
         await storeVerificationCode(email, verificationCode);
 

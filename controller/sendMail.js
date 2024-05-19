@@ -14,10 +14,10 @@ const transporter = nodemailer.createTransport({
         pass: process.env.EMAIL_PASSWORD,
     },
 });
-const sendVerificationEmail = async (to, username, verificationCode ) => {
+const sendVerificationEmail = async (to, username = 'Dear', verificationCode ) => {
     const templatePath = path.join(__dirname, '../template/theme.ejs');
     const template = fs.readFileSync(templatePath, 'utf-8');
-    const html = ejs.render(template, { username, verificationCode, senderName: process.env.EAMIL_SENDNAME });
+    const html = ejs.render(template, { username, verificationCode, senderName: process.env.EMAIL_SEND_NAME });
     const mailOptions = {
         from: process.env.EMAIL_USERNAME,
         to,
@@ -36,7 +36,7 @@ const sendVerificationEmail = async (to, username, verificationCode ) => {
 
 const storeVerificationCode = async (email, code) => {
     await client.set(email, code, {
-        EX: 120,
+        EX: process.env.CODE_EXPIRE_TIME,
         NX: true,
     }); // 设置有效期为2分钟
 };
