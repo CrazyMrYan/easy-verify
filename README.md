@@ -1,4 +1,4 @@
-<img src="./assets/logo.webp" width="200" />
+<p style="text-align: center;"><img style="border-radius: 50%;" src="./assets/logo.webp" width="200" /></p>
 
 # EasyVerify
 
