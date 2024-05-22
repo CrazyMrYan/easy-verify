@@ -47,7 +47,7 @@ app.post('/verify-code', async (req, res) => {
             return res.status(500).json({ msg: 'Error verifying code.' });
         }
         if (isValid) {
-            return res.status(204).json({ msg: 'Verification code is valid.' });
+            return res.status(201).json({ msg: 'Verification code is valid.' });
         }
         return res.status(400).json({ msg: 'Verification code is invalid or expired.' });
     });

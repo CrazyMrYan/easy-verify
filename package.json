@@ -16,6 +16,8 @@
   "scripts": {
     "prod:server": "pm2 start index.js --name verify-code --watch",
     "prod:stop": "pm2 delete verify-code",
-    "dev": "nodemon index"
+    "dev": "nodemon index",
+    "build": "docker build -t easy-verify .",
+    "build:tar": "docker save -o easy-verify.tar easy-verify"
   }
 }
