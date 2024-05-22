@@ -1,12 +1,8 @@
-
-<div align="center">
- <img src="./assets/logo.webp" width="200" />
-</div>
-
 # EasyVerify
 
 EasyVerify 是一个基于 Node.js 和 Redis 的开源邮件验证码服务，提供发送和校验验证码的功能。
 
+![preview](./assets/code-verify.png)
 ## 功能
 
 - 生成并发送验证码到指定邮箱
