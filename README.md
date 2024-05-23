@@ -1,5 +1,11 @@
 # EasyVerify
 
+![GitHub License](https://img.shields.io/github/license/CrazyMrYan/easy-verify)
+![GitHub Tag](https://img.shields.io/github/v/tag/CrazyMrYan/easy-verify)
+![GitHub last commit](https://img.shields.io/github/last-commit/CrazyMrYan/easy-verify)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/CrazyMrYan/easy-verify)
+![GitHub Issues or Pull Requests](https://img.shields.io/github/issues-pr/CrazyMrYan/easy-verify)
+
 EasyVerify 是一个基于 Node.js 和 Redis 的开源邮件验证码服务，提供发送和校验验证码的功能。
 
 ![preview](./assets/code-verify.png)
